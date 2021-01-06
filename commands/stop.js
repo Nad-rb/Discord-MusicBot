@@ -21,10 +21,10 @@ if(!serverQueue.connection.dispatcher)return
       } catch (error) {
         message.guild.me.voice.channel.leave();
         message.client.queue.delete(message.guild.id);
-        return sendError(`:notes: The player has stopped and the queue has been cleared.: ${error}`, message.channel);
+        return sendError(`🎵 The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }
     message.client.queue.delete(message.guild.id);
     serverQueue.songs = [];
-    message.react("✅")
+    message.react("☑️")
   },
 };
