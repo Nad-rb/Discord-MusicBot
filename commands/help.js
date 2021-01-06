@@ -5,7 +5,7 @@ module.exports = {
         name: "help",
         description: "To show all commands",
         usage: "[command]",
-        aliases: ["commands", "help me", "pls help"]
+        aliases: ["commands", "help me", "pls help", "cmds"]
     },
 
     run: async function(client, message, args){
@@ -20,7 +20,7 @@ module.exports = {
         .setAuthor("Commands of "+client.user.username, "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
         .setColor("BLUE")
         .setDescription(allcmds)
-        .setFooter(`To get info of each command you can do ${client.config.prefix}help [command] | Hander by ItzCutePikachu#2006`)
+        .setFooter(`To get info of each command you can do ${client.config.prefix}help [command] | From NoobBot`)
 
         if(!args[0])return message.channel.send(embed)
         else {
